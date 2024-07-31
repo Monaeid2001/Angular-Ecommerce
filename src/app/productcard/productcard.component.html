@@ -1,0 +1,28 @@
+    <div class="col h-100 product-grid">
+      <div class="card h-100">
+        <button (click)="redirectToDetails(productItem.id)"><img [src]="productItem.images[0]" class="card-img-top product-image" alt="Skyscrapers" style="height: 250px; width: 100%;"/>
+        <span class="product-discount-label" [ngStyle]="{'background-color': productItem.stock>0 ? '#1655e8' : '#dd0706'}">{{productItem.stock>0 ? 'OnStock' : 'OutOfStock' }}</span>
+        </button>
+        <ul class="product-links">
+            <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
+            <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+            <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+        </ul>
+        <div class="card-body product-content">
+            <ul class="rating">
+                <li class="fas fa-star"></li>
+                <li class="fas fa-star"></li>
+                <li class="fas fa-star"></li>
+                <li class="far fa-star"></li>
+                <li class="far fa-star"></li>
+            </ul>
+          <h3 class="card-title">{{productItem.title}}</h3>
+          <p class="card-text font-italic text-muted mb-0 small" style="height: 60px; overflow: hidden;">
+            {{productItem.description}}
+          </p>
+          <div class="price" style="margin-left: 5px !important;">{{productItem.price*55}}EGP</div>
+          <button class="View-Details" (click)="redirectToDetails(productItem.id)">View Details</button>
+          <button class="add-to-cart" (click)="addProduct(productItem)">Add To Cart</button>
+        </div>
+        </div>
+        </div>

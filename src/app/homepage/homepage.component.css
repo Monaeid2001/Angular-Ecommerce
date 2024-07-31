@@ -1,0 +1,37 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url("../../assets/images/online-fashion-shopping-with-laptop.jpg") no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-text{
+    display: none;
+  }
+  .hero{
+    width:100%;
+  }
+  [class*="col-"] {
+    width: 100%;
+  }
+}

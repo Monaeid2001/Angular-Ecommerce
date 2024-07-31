@@ -1,0 +1,6 @@
+    <h1 class="text-center" style="margin-top: 50px;">Our Products</h1>
+    <div class="row row-cols-1 row-cols-md-4 g-4"style="margin:50px 20px ;">
+    @for(product of products; track $index){
+        <app-productcard [productItem]="product"></app-productcard>
+    }
+</div>
